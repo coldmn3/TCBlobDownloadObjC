@@ -12,9 +12,9 @@
 
 -(instancetype)init {
     if (self = [super init]) {
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationEnteredBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillEntereForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
+//        
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationEnteredBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillEntereForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
         
         self.state = kDownloadManagerStateForeground;
         self.startImmediatly = YES;
@@ -142,6 +142,7 @@
     [download cancelWithResumeData:^(NSData *data) {
         NSURLSessionDownloadTask *downloadTask = weakDownload.downloadTask;
         [self.delegate.downloads removeObjectForKey:@(downloadTask.taskIdentifier)];
+        
         NSURLSessionDownloadTask *newDownloadTask = [self.activeSession downloadTaskWithResumeData:data];
         download.downloadTask = newDownloadTask;
         self.delegate.downloads[@(newDownloadTask.taskIdentifier)] = download;

@@ -246,7 +246,8 @@
 				ORGANIZATIONNAME = "UnlimApps Inc";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = 6N5F9AHATC;
+						DevelopmentTeam = 4BQED3KEQ2;
+						ProvisioningStyle = Manual;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -485,12 +486,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4BQED3KEQ2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TCBlobDownloadObjC/TCBlobDownloadObjC-Prefix.pch";
 				INFOPLIST_FILE = "TCBlobDownloadObjC/TCBlobDownloadObjC-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "9cf03b2d-798e-43bc-b254-a2b976abf753";
+				PROVISIONING_PROFILE_SPECIFIER = general;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -503,12 +506,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TCBlobDownloadObjC/TCBlobDownloadObjC-Prefix.pch";
 				INFOPLIST_FILE = "TCBlobDownloadObjC/TCBlobDownloadObjC-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

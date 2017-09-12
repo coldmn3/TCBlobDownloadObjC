@@ -22,11 +22,11 @@
     
     self.manager = [[TCBlobDownloadManager alloc] init];
     self.manager.startImmediatly = YES;
-    [self.manager downloadFileAtURL:[NSURL URLWithString:@"http://mirror.internode.on.net/pub/test/100meg.test"]
+    [self.manager downloadFileAtURL:[NSURL URLWithString:@"http://download.parallels.com/desktop/v13/13.0.1-42947/ParallelsDesktop-13.0.1-42947.dmg"]
                         toDirectory:nil
                            withName:nil
                            progress:^(double progress,double speedRate, double time,int64_t totalBytesWritten, int64_t totalBytesExpectedToWrite) {
-//                               NSLog(@"progress: %f", progress);
+                               NSLog(@"progress: %f", progress);
                            }
                          completion:^(NSError *error, NSURL *location) {
                              NSLog(@"File at: %@", location);
